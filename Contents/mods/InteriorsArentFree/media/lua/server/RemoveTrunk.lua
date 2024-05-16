@@ -1,5 +1,3 @@
-local modDataName = "rvInteriorMod"
-
 local function preventTrunkBedAccess(vehicle, part, chr)
 	local vehicleName = vehicle:getScriptName()
 	if RVInterior.canEnterFromBackList[vehicleName] then
@@ -27,10 +25,6 @@ end
 Vehicles.ContainerAccess.TruckBed = preventTrunkBedAccess
 
 local function onFillContainer(roomName, containerType, itemContainer)
-	print(roomName)
-	print(containerType)
-	print(itemContainer)
-
 	local object = itemContainer:getParent()
 
 	local scriptName = object:getScriptName()
